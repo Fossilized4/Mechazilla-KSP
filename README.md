@@ -8,7 +8,7 @@ COMPATABILITY:
 
 DEPENDENCIES:
 
-- Dependencies will come in future updates; currently none
+- Module Manager
 
 
 INSTALLATION:
