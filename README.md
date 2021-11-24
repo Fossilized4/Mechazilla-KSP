@@ -15,11 +15,6 @@ INSTALLATION:
 
 - Take the "Mechazilla" folder out of the "GameData" which is in the downloaded zip and place it in the "GameData" folder which is in your KSP directory.
 
-	OR:
-
-- Replace the "GameData" folder in your KSP directory with the "GameData" folder in the downloaded zip.
-
-
 IF YOU WANT THE REAL SCALE ARMS:
 
 - Open 'Fossil Industries / Mechazilla / Patches' and delete "StockSize.cfg".
