@@ -20,6 +20,8 @@ INSTALLATION:
 - Replace the "GameData" folder in your KSP directory with the "GameData" folder in the downloaded zip.
 
 
-IF YOU WANT THE REAL SCALE ARMS:
+REALISM OVERHAUL:
 
-- Open 'Fossil Industries / Mechazilla / Patches' and delete "StockSize.cfg".
+- Delete "StockSize.cfg" in 'Fossil Industries/Mechazilla/Patches'
+
+- Place "Fossil Extras" into your GameData with the included "MechazillaRO.cfg" inside.
