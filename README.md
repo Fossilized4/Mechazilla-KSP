@@ -9,6 +9,7 @@ COMPATABILITY:
 DEPENDENCIES:
 
 - Module Manager
+- Kerbal Konstructs (If you want KK Static)
 
 
 INSTALLATION:
