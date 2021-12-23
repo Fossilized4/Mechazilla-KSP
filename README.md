@@ -26,3 +26,8 @@ REALISM OVERHAUL:
 - Delete "StockSize.cfg" in 'Fossil Industries/Mechazilla/Patches'
 
 - Place "Fossil Extras" into your GameData with the included "MechazillaRO.cfg" inside.
+
+For the KK Static:
+
+- To scale by a factor of 1.6: Set scale to 16 before placing the decimal between the 1 and 6, then press enter.
+
