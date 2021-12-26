@@ -10,7 +10,7 @@ DEPENDENCIES:
 
 - Module Manager
 - Kerbal Konstructs (If You Want KK Static)
-- B9 Part Switch (For Switchable Panel Variant)
+- B9 Part Switch (For Switchable Paneled Variant)
 
 
 INSTALLATION:
