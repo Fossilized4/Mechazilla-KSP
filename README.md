@@ -30,5 +30,5 @@ REALISM OVERHAUL:
 
 For the KK Static:
 
-- To scale by a factor of 1.6: Set scale to 16 before placing the decimal between the 1 and 6, then press enter.
+- Scale by a factor of 0.625.
 
