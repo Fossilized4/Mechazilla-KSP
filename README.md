@@ -8,7 +8,7 @@ COMPATABILITY:
 
 DEPENDENCIES:
 
-- Module Manager
+- ModuleManager
 - Kerbal Konstructs (If You Want KK Static)
 - B9 Part Switch (For Switchable Paneled Variant)
 
