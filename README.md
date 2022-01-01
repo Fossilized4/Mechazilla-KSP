@@ -3,7 +3,7 @@ A mod for Kerbal Space Program that adds the SpaceX Mechazilla catching system. 
 
 COMPATABILITY:
 
-- This mod works with stock Kerbal Space Program (1.12.2) + Realism Overhaul (1.10.1 is the only version tested)
+- This mod works with stock Kerbal Space Program (1.12.2) + Realism Overhaul (1.10.1 and above)
 
 
 DEPENDENCIES:
