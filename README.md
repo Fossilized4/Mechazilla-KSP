@@ -19,7 +19,7 @@ INSTALLATION:
 
 	OR:
 
-- Replace the "GameData" folder in your KSP directory with the "GameData" folder in the downloaded zip.
+- Merge the "GameData" folder in your KSP directory with the "GameData" folder in the downloaded zip.
 
 
 REALISM OVERHAUL:
