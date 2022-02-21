@@ -18,14 +18,36 @@ namespace FossilIndustries.Modules
         public float AnimationMaxSpeed = 1f;
 
         [KSPField]
-        private string AnimOnText;
+        public string AnimOnText;
 
         [KSPField]
-        private string AnimOffText;
+        public string AnimOffText;
 
-        [KSPField(guiActive = true, guiActiveUnfocused = true, guiName = "Animate", isPersistant = true, unfocusedRange = 25f)]
-        [UI_Toggle(affectSymCounterparts = UI_Scene.All, disabledText = "Open Arms", enabledText = "Close Arms", scene = UI_Scene.All)]
-        public bool AnimateBool = false;
+        [KSPField]
+        public string AnimToggleText;
+
+        [KSPField(guiActive = true, guiActiveUnfocused = true, guiName = "Animate", isPersistant = true, unfocusedRange = 75f)]
+        [UI_Toggle(affectSymCounterparts = UI_Scene.All, disabledText = "AnimOffText", enabledText = "AnimOnText", scene = UI_Scene.All)]
+        public bool AnimateBool = true;
+
+        [KSPAction(guiName = "AnimToggleText")]
+        private void ToggleAction(KSPActionParam param)
+        {
+            AnimateBool = !AnimateBool;
+        }
+
+        [KSPAction(guiName = "AnimOffText")]
+        private void EnableAction(KSPActionParam param)
+        {
+            AnimateBool = true;
+        }
+
+        [KSPAction(guiName = "AnimOnText")]
+        private void DisableAction(KSPActionParam param)
+        {
+            AnimateBool = false;
+        }
+
 
         private Animation anim;
 
@@ -37,10 +59,51 @@ namespace FossilIndustries.Modules
             {
                 Debug.LogError($"[{MODULENAME}] Could not find animation {AnimationID} on part {part.name}");
             }
+
+            if (AnimOnText == null)
+            {
+                Debug.LogError($"[{MODULENAME}] AnimOnText not set on part {part.name}");
+            }
+            else
+            {
+                Actions["DisableAction"].guiName = AnimOnText;
+            }
+
+            if (AnimOffText == null)
+            {
+                Debug.LogError($"[{MODULENAME}] AnimOffText not set on part {part.name}");
+            }
+            else
+            {
+                Actions["EnableAction"].guiName = AnimOffText;
+            }
+
+            if (AnimToggleText == null)
+            {
+                Debug.LogError($"[{MODULENAME}] AnimToggleText not set on part {part.name}");
+            }
+            else
+            {
+                Actions["ToggleAction"].guiName = AnimToggleText;
+            }
+
             PrevAnimateBool = AnimateBool;
-
-
+            if (Fields.TryGetFieldUIControl("AnimateBool", out UI_Toggle AnimateFieldVar))
+            {
+                if (AnimOnText != null)
+                {
+                    AnimateFieldVar.enabledText = AnimOnText;
+                }
+                if (AnimOffText != null)
+                {
+                    AnimateFieldVar.disabledText = AnimOffText;
+                }
+               
+            }
+            
+            
         }
+
         public void FixedUpdate()
         {
             if (AnimateBool == !PrevAnimateBool)
@@ -55,7 +118,7 @@ namespace FossilIndustries.Modules
                 else
                 {
                     anim[AnimationID].speed = -AnimationMaxSpeed * (AnimationSpeed / 100);
-                    anim[AnimationID].normalizedTime = anim[AnimationID].length - 1;
+                    anim[AnimationID].normalizedTime = 1.0f;
                     anim[AnimationID].enabled = true;
                     anim.Play(AnimationID);
                 }
