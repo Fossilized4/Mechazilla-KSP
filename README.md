@@ -31,4 +31,3 @@ REALISM OVERHAUL:
 For the KK Static:
 
 - Scale by a factor of 0.625.
-test
